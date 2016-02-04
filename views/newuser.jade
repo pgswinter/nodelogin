@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h2= title
+    .col-md-9.col-md-pull-3.bd-content
+        
+        .form-signin
+            form#formAddUser.bd-example(name="adduser",method="post",action="/adduser")
+                p Please enter yout name and your email inside textbox
+                .input-group
+                    <span class="input-group-addon" id="basic-addon1">@</span>
+                    input#inputUserName.form-control(type="text", placeholder="Typing your name here", name="username",aria-describedby="basic-addon2")
+                br
+                .input-group
+                    input#inputUserEmail.form-control(type="text", placeholder="Typing your email here", name="useremail",aria-describedby="basic-addon2")
+                    <span class="input-group-addon" id="basic-addon2">@example.com</span>
+                br
+                button#btnSubmit.btn.btn-success(type="submit") SUBMIT

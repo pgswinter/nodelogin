@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    Info Page
+    .container
+    .row
+        .col-md-9.col-md-pull-3.bd-content
+            .form-signin
+                h1.bd-title#content List group
+                .bd-example
+                    .list-group
+                        ul
+                            each user, i in userlist
+                                li.list-group-item
+                                    a(href="mailto:#{user.email}")= user.username
+            form.form-signin(action="/gonewuser")
+                button.btn.btn-lg.btn-primary.btn-block(type="submit") ADD
+            form.form-signin(action="/logout")
+                button.btn.btn-lg.btn-primary.btn-block(type="submit") LOG OUT     

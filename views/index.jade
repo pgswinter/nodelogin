@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Anh(Robert)T. NGUYEN - Examination
+  .container
+      form.form-signin(action="/gouserlist")
+          h2.form-signin-heading Please sign in
+          label.sr-only(for="inputEmail") Email address
+          input#inputEmail.form-control(type="email",placeholder="Email address",required ,autofocus)
+          label.sr-only(for="inputPassword") Password
+          input#inputPassword.form-control(type="email",placeholder="Password",required)
+          .checkbox
+              label
+                input(type="checkbox",value="remember-me",action="/goinfo")
+          button.btn.btn-lg.btn-primary.btn-block(type="submit") Sign in

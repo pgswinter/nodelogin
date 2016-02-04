@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    div.loginform
+        form#loginform(name="login",method="post")
+            input#uname(type="email", placeholder="Enter Email", name="loginemail")
+            input#pword(type="password", placeholder="Enter Password", name="loginpassword")
+            input.btn.btn-primary.btn-block.btn-large(type="submit", placeholder="Enter Password", value="LOG IN")
